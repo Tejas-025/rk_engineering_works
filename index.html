@@ -3,7 +3,662 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Kirtykumar Mudliaar - RK Engineering Works</title><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr. Kirtykumar Mudliaar - RK Engineering Works</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #000336 0%, #001854 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: linear-gradient(135deg, #000336 0%, #001854 100%);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.logo-container {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.company-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  margin: -3rem 1rem 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 3;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000336;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-item:hover {
+  background: #000336;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #000336, #001854);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-item:hover .contact-icon {
+  background: #fff;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.contact-item:hover .contact-icon svg {
+  stroke: #000336;
+}
+
+.contact-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.action-btn-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #000336, #001854);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,3,54,0.3);
+}
+
+.action-btn-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.action-btn-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.save-contact-btn {
+  background: linear-gradient(135deg, #000336, #001854);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 15px rgba(0,3,54,0.4);
+  transition: all 0.3s ease;
+}
+
+.save-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,3,54,0.5);
+}
+
+.brochure-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.brochure-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+  opacity: 0.3;
+}
+
+.brochure-content {
+  position: relative;
+  z-index: 1;
+}
+
+.brochure-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.brochure-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.brochure-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.brochure-desc {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.brochure-btn {
+  background: #fff;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.brochure-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.brochure-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.customers-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000336;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #000336, #667eea);
+  border-radius: 2px;
+}
+
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.customer-item {
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #333;
+  border-left: 3px solid #000336;
+  transition: all 0.3s ease;
+}
+
+.customer-item:hover {
+  background: #000336;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.customer-location {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+.products-section {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: #fff;
+}
+
+.products-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.product-item {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.product-item:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-5px);
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 1.4rem;
+  }
+  
+  .action-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .customers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo-container">
+    <img src="https://i.postimg.cc/fLwW5pbn/rk-logo.png" alt="RK Engineering Works" class="logo">
+  </div>
+  <div class="hero-content">
+    <h1 class="company-name">RK ENGINEERING WORKS</h1>
+    <p class="tagline">Excellence in Engineering Solutions</p>
+  </div>
+</div>
+
+<div style="padding: 0 1rem;">
+  <div class="profile-card">
+    <div class="profile-header">
+      <h2 class="profile-name">Mr. KIRTYKUMAR MUDLIAAR</h2>
+      <p class="profile-title">Proprietor</p>
+    </div>
+
+    <button class="save-contact-btn" onclick="downloadVCard()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <circle cx="12" cy="8" r="3.5" stroke="currentColor" fill="none" stroke-width="2"/>
+        <path d="M5 18c0-3.863 3.137-7 7-7s7 3.137 7 7m-7-2v6m3-3l-3 3-3-3" stroke="currentColor" fill="none" stroke-width="2"/>
+      </svg>
+      Save Contact
+    </button>
+
+    <div class="action-buttons">
+      <a href="tel:+919844462298" class="action-btn">
+        <div class="action-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <span class="action-btn-label">Call</span>
+      </a>
+
+      <a href="https://wa.me/+919844462298" class="action-btn" target="_blank">
+        <div class="action-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+        </div>
+        <span class="action-btn-label">WhatsApp</span>
+      </a>
+
+      <a href="mailto:rkengineering111@gmail.com" class="action-btn">
+        <div class="action-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <span class="action-btn-label">Email</span>
+      </a>
+
+      <a href="https://maps.app.goo.gl/d5dav2MXLoiKMYdg9" class="action-btn" target="_blank">
+        <div class="action-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <span class="action-btn-label">Location</span>
+      </a>
+    </div>
+
+    <div class="contact-grid">
+      <a href="tel:+919844462298" class="contact-item">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div class="contact-text">+91 98444 62298</div>
+      </a>
+
+      <a href="mailto:rkengineering111@gmail.com" class="contact-item">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-text">rkengineering111@gmail.com</div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/d5dav2MXLoiKMYdg9" class="contact-item" target="_blank">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="contact-text">1768/B, Jed Galli, Shahpur, Belagavi, Karnataka- IN 590003</div>
+      </a>
+    </div>
+
+    <div class="brochure-section">
+      <div class="brochure-content">
+        <div class="brochure-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3 class="brochure-title">Company Brochure</h3>
+        <p class="brochure-desc">View our complete product catalog and customer list</p>
+        <a href="https://drive.google.com/file/d/1dNzAV0iMnOcL6PF2sLgYfU1gwtLby5w9/view?usp=sharing" target="_blank" class="brochure-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          View Brochure
+        </a>
+      </div>
+    </div>
+
+    <div class="products-section">
+      <h3 class="section-title" style="color: #fff;">Our Products</h3>
+      <div class="products-grid">
+        <div class="product-item">
+          <div class="product-name">⚙️ Heavy Duty Mixer</div>
+          <div class="product-desc">Industrial-grade mixing solutions for food processing</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">🏭 Jaggery Crushing Machine</div>
+          <div class="product-desc">Efficient crushing equipment for jaggery production</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="customers-section">
+      <h3 class="section-title">Our Valued Customers</h3>
+      <div class="customers-grid">
+        <div class="customer-item">Sadanand Sweets & Khara<div class="customer-location">Gokak</div></div>
+        <div class="customer-item">Avis Foods<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Kalyani Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Camp Purohit<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Atul Purohit Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Jadhav Brothers<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Falcon System<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Ship Abrasive<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">National Carbon<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Nilam Supari<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Raj Purohit<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Mayur Masala<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Kalburgi Sweets<div class="customer-location">Gokak</div></div>
+        <div class="customer-item">Janta Kardant<div class="customer-location">Gokak</div></div>
+        <div class="customer-item">Mani Mark<div class="customer-location">Goa</div></div>
+        <div class="customer-item">Mani Mark<div class="customer-location">Nashik</div></div>
+        <div class="customer-item">Kondaji Chivda<div class="customer-location">Nashik</div></div>
+        <div class="customer-item">D.B. Bhore<div class="customer-location">Sangli</div></div>
+        <div class="customer-item">Vinayak Sweets<div class="customer-location">Gokak</div></div>
+        <div class="customer-item">Guru Sweets<div class="customer-location">Gokak</div></div>
+        <div class="customer-item">Sandeep Varute<div class="customer-location">Kolhapur</div></div>
+        <div class="customer-item">Ashok Sawant<div class="customer-location">Kolhapur</div></div>
+        <div class="customer-item">Wood Guard<div class="customer-location">Kolhapur</div></div>
+        <div class="customer-item">Jyoti Masala<div class="customer-location">Ichalkaranji</div></div>
+        <div class="customer-item">Prakash Ghate<div class="customer-location">Ichalkaranji</div></div>
+        <div class="customer-item">SIBT<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Poornima Fleks<div class="customer-location">Sirsi</div></div>
+        <div class="customer-item">Mamta Industries<div class="customer-location">Sirsi</div></div>
+        <div class="customer-item">Mahaganpati<div class="customer-location">Sullaya</div></div>
+        <div class="customer-item">Vijaya Sweets<div class="customer-location">Amingad</div></div>
+        <div class="customer-item">Vastrad<div class="customer-location">Amingad</div></div>
+        <div class="customer-item">Patil Ghade<div class="customer-location">Amingad</div></div>
+        <div class="customer-item">Uday Masala<div class="customer-location">Kadegaon</div></div>
+        <div class="customer-item">Kapale Bhadang<div class="customer-location">Sangli</div></div>
+        <div class="customer-item">Heritage Spices<div class="customer-location">Solapur</div></div>
+        <div class="customer-item">Hanuman Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Niyaz Hotel<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Sai Purohit<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Gokul Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">M.R Enterprises<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">H & H International T.C<div class="customer-location">Sirsi</div></div>
+        <div class="customer-item">Kajtare Foods<div class="customer-location">Satara</div></div>
+        <div class="customer-item">Manis Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Manis Sweets<div class="customer-location">Hubali</div></div>
+        <div class="customer-item">Mishra Pedha<div class="customer-location">Dharwad</div></div>
+        <div class="customer-item">Thakur Pedha<div class="customer-location">Dharwad</div></div>
+        <div class="customer-item">Gruhini Home Industries<div class="customer-location">Dharwad</div></div>
+        <div class="customer-item">Tasty Bhadang<div class="customer-location">Nipani</div></div>
+        <div class="customer-item">Katwa Masala<div class="customer-location">Guledgud</div></div>
+        <div class="customer-item">Charlis Sweets<div class="customer-location">Belgaum</div></div>
+        <div class="customer-item">Renuka Sweets<div class="customer-location">Hubali</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2024 RK Engineering Works. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">Created with ❤️ for Excellence</p>
+  </div>
+</div>
+
+<script>
+function downloadVCard() {
+  const vcard = `BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Mudliaar;Kirtykumar;;Mr,  ;
+FN:Mr,  Kirtykumar Mudliaar
+ORG:RK ENGINEERING WORKS
+TITLE:Proprietor
+ADR;CHARSET=UTF-8;TYPE=WORK:;;1
 <meta name="robots" content="noindex, nofollow">
 <style>
 * {
